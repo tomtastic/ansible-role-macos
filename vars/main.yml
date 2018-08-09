@@ -55,15 +55,13 @@
    # video
       #- name: vlc
       # sound & music
-      - name: audacity
-      - name: audacity-lame-library
       #- name: xld
       #- name: soundflower
       #- name: linein
       #- name: radiant-player
       #- name: amazon-music
    # system tools
-      #- name: iterm2
+      - name: iterm2
       #- name: appcleaner
       #- name: disk-inventory-x
       #- name: xquartz
