@@ -5,3 +5,4 @@
     dest: /etc/pam.d/sudo
     line: 'auth       sufficient     pam_tid.so'
     insertafter: '# sudo: auth account password session'
+  become: yes
