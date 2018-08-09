@@ -45,7 +45,7 @@
     homebrew_cask_formulae:
    # development
       #- name: atom
-      #- name: virtualbox
+      - name: virtualbox
       #- name: vagrant
       #- name: vmware-fusion 
       #- name: pinegrow-web-designer
@@ -54,8 +54,8 @@
    # video
       #- name: vlc
       # sound & music
-      #- name: audacity
-      #- name: audacity-lame-library
+      - name: audacity
+      - name: audacity-lame-library
       #- name: xld
       #- name: soundflower
       #- name: linein
