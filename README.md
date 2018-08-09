@@ -22,11 +22,9 @@ None so far
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: mbp
       roles:
-         - { role: ansible-role-mbp }
+         - { role: ansible-role-mbp, username:tomtastic }
 
 License
 -------
