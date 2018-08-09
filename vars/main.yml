@@ -46,6 +46,7 @@
    # development
       #- name: atom
       - name: virtualbox
+      - name: virtualbox-extension-pack
       #- name: vagrant
       #- name: vmware-fusion 
       #- name: pinegrow-web-designer
