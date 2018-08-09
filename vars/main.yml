@@ -1,6 +1,8 @@
 ---
 # vars file for ansible-role-mbp
     homebrew_taps:
+      - homebrew/core
+      - homebrew/cask
       #- homebrew/dupes
       #- homebrew/science
       #- caskroom/cask
