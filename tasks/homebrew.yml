@@ -1,9 +1,5 @@
 ---
 # tasks file for ansible-role-mbp
-
-- name: Ensure we have homebrew itself installed
-  include_tasks: homebrew_bootstrap.yml
-
 - name: install homebrew items
   include_tasks: homebrew.yml
 ### Homebrew (see vars directory)
