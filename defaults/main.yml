@@ -1,5 +1,6 @@
 ---
 # defaults file for ansible-role-mbp
+#--------------------------------------------------------
 homebrew_repo: https://github.com/Homebrew/brew
 
 homebrew_prefix: /usr/local
@@ -22,3 +23,9 @@ homebrew_cask_appdir: /Applications
 
 homebrew_use_brewfile: true
 homebrew_brewfile_dir: '~'
+#--------------------------------------------------------
+mas_email: ""
+mas_password: ""
+mas_upgrade_all_apps: no
+mas_signin_dialog: yes
+#--------------------------------------------------------
