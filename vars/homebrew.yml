@@ -1,0 +1,61 @@
+---
+# vars file for ansible-role-mbp
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  #- homebrew/dupes
+  #- homebrew/science
+  #- caskroom/cask
+  #- homebrew/apache
+homebrew_formulae:
+# macos package management
+  - name: mas
+# programming
+  #- name: make
+  #- name: gcc
+  #- name: gdb
+  #- name: go
+# file management
+  #- name: git
+# system tools
+  #- name: fish
+  #- name: direnv
+  #- name: fzf
+  #- name: curl
+  #- name: grep
+  #- name: nkf
+  #- name: gzip
+  #- name: less
+  #- name: htop
+  #- name: p7zip
+  #- name: unrar
+  #- name: wget
+  #- name: lv
+  #- name: tree
+# network
+  #- name: openssh
+  #- name: ab
+  #- name: mtr
+  - name: nmap
+  #- name: rsync
+  #- name: whois
+  #- name: gnupg
+  #- name: openssl
+homebrew_cask_formulae:
+# development
+  - name: virtualbox
+  - name: virtualbox-extension-pack
+  #- name: vmware-fusion 
+  #- name: pinegrow-web-designer
+# web
+  #- name: google-chrome
+# video
+  #- name: vlc
+# sound & music
+  #- name: xld
+  #- name: soundflower
+  #- name: linein
+# system tools
+  - name: iterm2
+  #- name: xquartz
+
