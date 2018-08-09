@@ -64,13 +64,10 @@
       #- name: amazon-music
    # system tools
       #- name: iterm2
-      #- name: karabiner-elements
       #- name: appcleaner
       #- name: disk-inventory-x
-      #- name: the-unarchiver
       #- name: xquartz
   # book & document
       #- name: libreoffice
   # misc
-      #- name: slack
       #- name: keepassx
