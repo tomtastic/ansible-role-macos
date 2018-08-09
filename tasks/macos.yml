@@ -1,4 +1,5 @@
 ---
+
 - name: Enable TouchID sudo
   lineinfile:
     dest: /etc/pam.d/sudo
