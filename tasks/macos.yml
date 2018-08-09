@@ -1,0 +1,7 @@
+---
+- name: Enable TouchID sudo
+  blockinfile:
+    path: /etc/pam.d/sudo
+    block: |
+      auth       sufficient     pam_tid.so
+      auth       sufficient     pam_smartcard.so
