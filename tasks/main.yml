@@ -1,2 +1,38 @@
 ---
 # tasks file for ansible-role-mbp
+
+### Homebrew (see vars directory)
+- name: add homebrew taps
+  homebrew_tap: tap={{ item }} state=present
+  with_items: "{{ homebrew_taps }}"
+- name: update homebrew
+  homebrew: update_homebrew=yes
+
+- name: install homebrew formulae
+  homebrew: >-
+    name={{ item.name }}
+    state={{ item.state | default('latest') }}
+    options={{ item.options | default() }}
+  with_items: "{{ homebrew_formulae }}"
+  register: brew_result
+
+- name: make info directory for brew 
+  file: path=brew_info state=directory
+- name: save brew info
+  shell: brew info {{ item }} > brew_info/{{ item }}
+  with_items: "{{ brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list }}"
+
+- name: install homebrew casks formulae
+  homebrew_cask: >-
+    name={{ item.name }}
+    state={{ item.state | default('installed') }}
+    options={{ item.options | default() }}
+  with_items: "{{ homebrew_cask_formulae }}"
+  register: cask_result
+
+- name: make info directory for cask
+  file: path=brew_info state=directory
+- name: save cask info
+  shell: brew cask info {{ item }} > brew_info/{{ item }}
+  with_items: "{{ cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list }}"
+
