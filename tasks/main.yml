@@ -3,9 +3,17 @@
 
 - name: Ensure we have homebrew itself installed
   include_tasks: homebrew_bootstrap.yml
+  tags: ['homebrew']
 
 - name: install homebrew items
   include_tasks: homebrew.yml
+  tags: ['homebrew']
 
 - name: install Mac App Store products
   include_tasks: mas.yml
+  tags: ['mas']
+
+- name: Configure MacOS
+  include_tasks: macos.yml
+  tags: ['macos']
+
