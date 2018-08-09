@@ -1,4 +1,0 @@
----
-# vars file for ansible-role-mbp
-- include_vars: homebrew.yml
-- include_vars: mas.yml
