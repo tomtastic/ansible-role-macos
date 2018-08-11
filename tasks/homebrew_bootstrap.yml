@@ -105,7 +105,7 @@
     name: "{{ item }}"
     state: present
     install_options: "appdir={{ homebrew_cask_appdir }}"
-  with_items: "{{ homebrew_cask_apps }}"
+  with_items: "{{ homebrew_cask_formulae }}"
 
 - name: Ensure blacklisted cask applications are not installed.
   homebrew_cask: "name={{ item }} state=absent"
@@ -117,7 +117,7 @@
     name: "{{ item.name | default(item) }}"
     install_options: "{{ item.install_options | default(omit) }}"
     state: present
-  with_items: "{{ homebrew_installed_packages }}"
+  with_items: "{{ homebrew_formulae }}"
 
 - name: Ensure blacklisted homebrew packages are not installed.
   homebrew: "name={{ item }} state=absent"
