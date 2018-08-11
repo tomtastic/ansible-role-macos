@@ -48,6 +48,7 @@ homebrew_cask_formulae:
 # development
   - name: virtualbox
   - name: virtualbox-extension-pack
+  - name: vagrant
   #- name: vmware-fusion 
   #- name: pinegrow-web-designer
 # web
