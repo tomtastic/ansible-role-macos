@@ -14,6 +14,7 @@
     owner: root
     group: wheel
     mode: 0755
+  become: yes
 
 - name: Put LaunchAgent in place to remap keys on login
   copy:
