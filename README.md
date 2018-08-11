@@ -24,7 +24,7 @@ Example Playbook
 
     - hosts: mbp
       roles:
-         - { role: ansible-role-mbp, username:tomtastic }
+         - { role: ansible-role-macos, username:tomtastic }
 
 License
 -------
