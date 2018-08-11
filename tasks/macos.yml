@@ -1,8 +1,22 @@
 ---
 
-- name: Enable TouchID sudo
+- name: Enable TouchID for sudo
   lineinfile:
     dest: /etc/pam.d/sudo
     line: 'auth       sufficient     pam_tid.so'
     insertafter: '# sudo: auth account password session'
   become: yes
+
+- name: Copy remap_mac_keys to /usr/local/bin/
+  copy:
+    src: remap_mac_keys
+    dest: /usr/local/bin/remap_mac_keys
+    owner: root
+    group: wheel
+    mode: 0755
+
+- name: Put LaunchAgent in place to remap keys on login
+  copy:
+    src: com.user.loginscript.plist
+    dest: ~/Library/LaunchAgents/com.user.loginscript.plist
+    mode: 0644

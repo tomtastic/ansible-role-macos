@@ -24,4 +24,3 @@ Map ${SECTION} ${ESCAPE}
 
 hidutil property --set "{\"UserKeyMapping\":[${CMD}]}"
 
-echo $(date) > /tmp/remap_mac_keys.ran
