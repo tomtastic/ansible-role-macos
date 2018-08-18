@@ -21,3 +21,12 @@
     src: com.user.loginscript.plist
     dest: ~/Library/LaunchAgents/com.user.loginscript.plist
     mode: 0644
+
+- name: Copy vagrant sudoers configuration into place
+  copy:
+    src: vagrant.sudoers
+    dest: /etc/sudoers.d/vagrant
+    mode: 0440
+    validate: 'visudo -cf %s'
+  become: yes
+
